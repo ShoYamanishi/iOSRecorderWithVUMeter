@@ -60,10 +60,20 @@ static const NSString* const RecordingButtonStopRecording  = @"Stop Recording";
                          NumOfChannels : &mNumOfChan
                             DataSource : &dataSource   ];
 
-    NSLog( @"Audio Input Device [%@]",  devName     );
-    NSLog( @"Data Source [%@]",         dataSource  );
-    NSLog( @"Sample Rate [%ld]",        mSampleRate );
-    NSLog( @"Number of Channels [%ld]", mNumOfChan  );
+    NSString* line1 = [NSString stringWithFormat :
+                                  @"Audio Input Device [%@]",  devName     ];
+
+    NSString* line2 = [NSString stringWithFormat :
+                                  @"Data Source [%@]",         dataSource  ];
+
+    NSString* line3 = [NSString stringWithFormat :
+                                  @"Sample Rate [%ld]",        mSampleRate ];
+
+    NSString* line4 = [NSString stringWithFormat :
+                                  @"Number of Channels [%ld]", mNumOfChan  ];
+
+    mAudioInputInfo.text = [ NSString stringWithFormat :
+                             @"%@\n%@\n%@\n%@", line1, line2, line3, line4 ];
 
     mWaveWriter = [ [ SlowTaskWaveWriter alloc ] init ];
     mWaveWriter.mBaseFileName     = @"sample_recorded";
