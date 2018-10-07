@@ -13,6 +13,19 @@
 		EF49431E2169D639000FC378 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF49431D2169D639000FC378 /* Assets.xcassets */; };
 		EF4943212169D639000FC378 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF49431F2169D639000FC378 /* LaunchScreen.storyboard */; };
 		EF4943242169D639000FC378 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EF4943232169D639000FC378 /* main.m */; };
+		EF49433A216AA35C000FC378 /* SlowTaskManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EF49432C216AA35B000FC378 /* SlowTaskManager.m */; };
+		EF49433B216AA35C000FC378 /* PassThruFragment.glsl in Resources */ = {isa = PBXBuildFile; fileRef = EF49432D216AA35B000FC378 /* PassThruFragment.glsl */; };
+		EF49433C216AA35C000FC378 /* PlayWaveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF49432E216AA35B000FC378 /* PlayWaveViewController.m */; };
+		EF49433D216AA35C000FC378 /* SlowTaskManagerPosix.mm in Sources */ = {isa = PBXBuildFile; fileRef = EF49432F216AA35B000FC378 /* SlowTaskManagerPosix.mm */; };
+		EF49433E216AA35C000FC378 /* VU_Meter_Texture.png in Resources */ = {isa = PBXBuildFile; fileRef = EF494333216AA35C000FC378 /* VU_Meter_Texture.png */; };
+		EF49433F216AA35C000FC378 /* SlowTaskWaveWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = EF494335216AA35C000FC378 /* SlowTaskWaveWriter.m */; };
+		EF494340216AA35C000FC378 /* SlowTaskQueue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF494336216AA35C000FC378 /* SlowTaskQueue.cpp */; };
+		EF494341216AA35C000FC378 /* WaveDrawingView.m in Sources */ = {isa = PBXBuildFile; fileRef = EF494337216AA35C000FC378 /* WaveDrawingView.m */; };
+		EF494342216AA35C000FC378 /* VUMeterViewGL.m in Sources */ = {isa = PBXBuildFile; fileRef = EF494339216AA35C000FC378 /* VUMeterViewGL.m */; };
+		EF494345216AA423000FC378 /* estimateSNR.c in Sources */ = {isa = PBXBuildFile; fileRef = EF494344216AA423000FC378 /* estimateSNR.c */; };
+		EF494349216AA44C000FC378 /* AudioInputManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EF494346216AA44B000FC378 /* AudioInputManager.m */; };
+		EF49434A216AA44C000FC378 /* 2DOrthoVertex.glsl in Resources */ = {isa = PBXBuildFile; fileRef = EF494348216AA44C000FC378 /* 2DOrthoVertex.glsl */; };
+		EF49434D216AA9E7000FC378 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF49434C216AA9E7000FC378 /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +39,28 @@
 		EF4943202169D639000FC378 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EF4943222169D639000FC378 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF4943232169D639000FC378 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EF49432A216AA35B000FC378 /* VUMeterViewGL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VUMeterViewGL.h; sourceTree = "<group>"; };
+		EF49432B216AA35B000FC378 /* WaveDrawingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaveDrawingView.h; sourceTree = "<group>"; };
+		EF49432C216AA35B000FC378 /* SlowTaskManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlowTaskManager.m; sourceTree = "<group>"; };
+		EF49432D216AA35B000FC378 /* PassThruFragment.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PassThruFragment.glsl; sourceTree = "<group>"; };
+		EF49432E216AA35B000FC378 /* PlayWaveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayWaveViewController.m; sourceTree = "<group>"; };
+		EF49432F216AA35B000FC378 /* SlowTaskManagerPosix.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SlowTaskManagerPosix.mm; sourceTree = "<group>"; };
+		EF494330216AA35B000FC378 /* SlowTaskManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlowTaskManager.h; sourceTree = "<group>"; };
+		EF494331216AA35C000FC378 /* SlowTaskManagerPosix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlowTaskManagerPosix.h; sourceTree = "<group>"; };
+		EF494332216AA35C000FC378 /* SlowTaskQueue.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SlowTaskQueue.hpp; sourceTree = "<group>"; };
+		EF494333216AA35C000FC378 /* VU_Meter_Texture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = VU_Meter_Texture.png; sourceTree = "<group>"; };
+		EF494334216AA35C000FC378 /* PlayWaveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayWaveViewController.h; sourceTree = "<group>"; };
+		EF494335216AA35C000FC378 /* SlowTaskWaveWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlowTaskWaveWriter.m; sourceTree = "<group>"; };
+		EF494336216AA35C000FC378 /* SlowTaskQueue.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SlowTaskQueue.cpp; sourceTree = "<group>"; };
+		EF494337216AA35C000FC378 /* WaveDrawingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaveDrawingView.m; sourceTree = "<group>"; };
+		EF494338216AA35C000FC378 /* SlowTaskWaveWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlowTaskWaveWriter.h; sourceTree = "<group>"; };
+		EF494339216AA35C000FC378 /* VUMeterViewGL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VUMeterViewGL.m; sourceTree = "<group>"; };
+		EF494343216AA423000FC378 /* estimateSNR.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = estimateSNR.h; sourceTree = "<group>"; };
+		EF494344216AA423000FC378 /* estimateSNR.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = estimateSNR.c; sourceTree = "<group>"; };
+		EF494346216AA44B000FC378 /* AudioInputManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioInputManager.m; sourceTree = "<group>"; };
+		EF494347216AA44B000FC378 /* AudioInputManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioInputManager.h; sourceTree = "<group>"; };
+		EF494348216AA44C000FC378 /* 2DOrthoVertex.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 2DOrthoVertex.glsl; sourceTree = "<group>"; };
+		EF49434C216AA9E7000FC378 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF49434D216AA9E7000FC378 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +80,7 @@
 			children = (
 				EF4943132169D638000FC378 /* iOSRecorderWithVUMeter */,
 				EF4943122169D638000FC378 /* Products */,
+				EF49434B216AA9E7000FC378 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,8 +104,37 @@
 				EF49431F2169D639000FC378 /* LaunchScreen.storyboard */,
 				EF4943222169D639000FC378 /* Info.plist */,
 				EF4943232169D639000FC378 /* main.m */,
+				EF494347216AA44B000FC378 /* AudioInputManager.h */,
+				EF494346216AA44B000FC378 /* AudioInputManager.m */,
+				EF494330216AA35B000FC378 /* SlowTaskManager.h */,
+				EF49432C216AA35B000FC378 /* SlowTaskManager.m */,
+				EF494336216AA35C000FC378 /* SlowTaskQueue.cpp */,
+				EF494332216AA35C000FC378 /* SlowTaskQueue.hpp */,
+				EF494331216AA35C000FC378 /* SlowTaskManagerPosix.h */,
+				EF49432F216AA35B000FC378 /* SlowTaskManagerPosix.mm */,
+				EF494338216AA35C000FC378 /* SlowTaskWaveWriter.h */,
+				EF494335216AA35C000FC378 /* SlowTaskWaveWriter.m */,
+				EF49432A216AA35B000FC378 /* VUMeterViewGL.h */,
+				EF494339216AA35C000FC378 /* VUMeterViewGL.m */,
+				EF494333216AA35C000FC378 /* VU_Meter_Texture.png */,
+				EF494348216AA44C000FC378 /* 2DOrthoVertex.glsl */,
+				EF49432D216AA35B000FC378 /* PassThruFragment.glsl */,
+				EF494334216AA35C000FC378 /* PlayWaveViewController.h */,
+				EF49432E216AA35B000FC378 /* PlayWaveViewController.m */,
+				EF49432B216AA35B000FC378 /* WaveDrawingView.h */,
+				EF494337216AA35C000FC378 /* WaveDrawingView.m */,
+				EF494344216AA423000FC378 /* estimateSNR.c */,
+				EF494343216AA423000FC378 /* estimateSNR.h */,
 			);
 			path = iOSRecorderWithVUMeter;
+			sourceTree = "<group>";
+		};
+		EF49434B216AA9E7000FC378 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EF49434C216AA9E7000FC378 /* AVFoundation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -102,6 +168,11 @@
 				TargetAttributes = {
 					EF4943102169D638000FC378 = {
 						CreatedOnToolsVersion = 10.0;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -128,9 +199,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF49433E216AA35C000FC378 /* VU_Meter_Texture.png in Resources */,
 				EF4943212169D639000FC378 /* LaunchScreen.storyboard in Resources */,
 				EF49431E2169D639000FC378 /* Assets.xcassets in Resources */,
 				EF49431C2169D638000FC378 /* Main.storyboard in Resources */,
+				EF49434A216AA44C000FC378 /* 2DOrthoVertex.glsl in Resources */,
+				EF49433B216AA35C000FC378 /* PassThruFragment.glsl in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,9 +215,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF49433C216AA35C000FC378 /* PlayWaveViewController.m in Sources */,
+				EF49433D216AA35C000FC378 /* SlowTaskManagerPosix.mm in Sources */,
+				EF494342216AA35C000FC378 /* VUMeterViewGL.m in Sources */,
 				EF4943192169D638000FC378 /* ViewController.m in Sources */,
+				EF49433F216AA35C000FC378 /* SlowTaskWaveWriter.m in Sources */,
 				EF4943242169D639000FC378 /* main.m in Sources */,
+				EF494341216AA35C000FC378 /* WaveDrawingView.m in Sources */,
+				EF494345216AA423000FC378 /* estimateSNR.c in Sources */,
 				EF4943162169D638000FC378 /* AppDelegate.m in Sources */,
+				EF49433A216AA35C000FC378 /* SlowTaskManager.m in Sources */,
+				EF494340216AA35C000FC378 /* SlowTaskQueue.cpp in Sources */,
+				EF494349216AA44C000FC378 /* AudioInputManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

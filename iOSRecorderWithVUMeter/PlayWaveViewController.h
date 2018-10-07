@@ -21,12 +21,39 @@
 // SOFTWARE.
 //
 
+#ifndef _PLAY_WAVE_VIEW_CONTROLLER_H_
+#define _PLAY_WAVE_VIEW_CONTROLLER_H_
+
 #import <UIKit/UIKit.h>
+#import <AVFoundation/AVFoundation.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+#import "WaveDrawingView.h"
 
-@property (strong, nonatomic) UIWindow *window;
+@class PlayWaveViewController;
 
+@protocol PlayWaveViewControllerDelegate <NSObject>
+
+- (void)      playWaveViewControllerDone : (PlayWaveViewController *) c;
+- (NSString*) playWaveViewControllerFileName;
 
 @end
 
+@interface PlayWaveViewController : UIViewController
+{
+IBOutlet UILabel*           mLabelFileName;
+IBOutlet UILabel*           mLabelSNR;
+IBOutlet UILabel*           mLabelSpeechRMS;
+IBOutlet UILabel*           mLabelNoiseRMS;
+IBOutlet UILabel*           mLabelPeak;
+IBOutlet UILabel*           mLabelLength;
+IBOutlet WaveDrawingView*   mLabelWaveDrawing;
+}
+
+@property (nonatomic, weak) id < PlayWaveViewControllerDelegate > mDelegate;
+@property (nonatomic, strong) AVAudioPlayer* mAP;
+
+-(IBAction) done : (id) sender;
+
+@end
+
+#endif /*_PLAY_WAVE_VIEW_CONTROLLER_H_*/

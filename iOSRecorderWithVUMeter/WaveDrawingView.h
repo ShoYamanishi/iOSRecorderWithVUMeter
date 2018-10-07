@@ -20,13 +20,21 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 //
+#ifndef _WAVE_DRAWING_VIEW_H_
+#define _WAVE_DRAWING_VIEW_H_
+
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface WaveDrawingView : UIView
+{
+    CALayer *plotLayer;
+}
 
-@property (strong, nonatomic) UIWindow *window;
+@property(nonatomic, strong) NSData* mData;
 
+-(void)plotWith : (NSData*) plots;
 
 @end
 
+#endif /*_WAVE_DRAWING_VIEW_H_*/

@@ -1,4 +1,4 @@
-// MIT License
+/// MIT License
 //
 // Copyright (c) [2018] [Shoichiro Yamanishi]
 //
@@ -20,13 +20,67 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 //
+#import "WaveDrawingView.h"
 
-#import <UIKit/UIKit.h>
+@implementation WaveDrawingView
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@synthesize mData;
 
-@property (strong, nonatomic) UIWindow *window;
 
+- (id)initWithFrame : (CGRect)frame
+{
+    self = [ super initWithFrame : frame ];
+
+    if (self) {
+        mData = nil;
+    }
+
+    return self;
+}
+
+
+- (void)drawRect : (CGRect)rect {
+
+    [ super drawRect : rect ];
+
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    
+    CGContextSetStrokeColorWithColor( context, [UIColor greenColor].CGColor );
+
+    CGContextSetLineWidth( context, 1.0 );
+
+    int *plots = malloc( [ mData length ] );
+
+    if ( plots == NULL ) {
+        return;
+    }
+
+    [ mData getBytes : plots length : [ mData length ] ];
+
+    unsigned long plotLen = [ mData length ] / sizeof(int);
+
+    CGContextMoveToPoint( context, 0, plots[0] );
+
+    for ( int i = 1; i < plotLen; i++ ) {
+    
+        CGContextAddLineToPoint( context, i/2, plots[i] );
+    }
+
+    CGContextStrokePath( context );
+
+    free( plots );
+
+}
+
+
+-(void)plotWith : (NSData *)plots
+{
+
+    mData = plots;
+    
+    [ self setNeedsDisplay ];
+
+}
 
 @end
 

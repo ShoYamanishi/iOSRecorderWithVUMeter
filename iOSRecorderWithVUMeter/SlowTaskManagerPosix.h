@@ -20,13 +20,32 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 //
+#ifndef _SLOW_TASK_MANAGER_POSIX_H_
+#define _SLOW_TASK_MANAGER_POSIX_H_
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+#import "SlowTaskManager.h"
 
-@property (strong, nonatomic) UIWindow *window;
+@class SlowTaskManagerPosix;
 
+@interface SlowTaskManagerPosix : NSObject
 
+@property (nonatomic,weak) id <SlowTaskManagerDelegate> mDelegate;
+-(id)    init;
+-(bool)  start;
+-(bool)  stop;
+-(bool)  abort;
+-(bool)  feed: (void*)data length:(int)len;
+
+// Following 4 will be overriden by the subclasses.
+-(bool) taskStart;
+-(void) taskStop;
+-(void) taskAbort;
+-(bool) taskFeed:   (void*) data length : (int)len;
+-(void) taskIgnore: (void*) data length : (int)len;
 @end
+
+
+#endif /*_SLOW_TASK_MANAGER_POSIX_H_*/
 

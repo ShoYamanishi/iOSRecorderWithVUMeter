@@ -20,13 +20,29 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 //
+// Dependencies:
+// The image of VU Meter taken from the following:
+// https://en.wikipedia.org/wiki/VU_meter#/media/File:VU_Meter.jpg
+// Iainf 05:15, 12 August 2006 (UTC) - Own work CC BY 2.5
+//
 
-#import <UIKit/UIKit.h>
+#ifndef _VU_METER_VIEW_GL_H_
+#define _VU_METER_VIEW_GL_H_
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+#import  <UIKit/UIKit.h>
+#import  <QuartzCore/QuartzCore.h>
+#include <OpenGLES/ES2/gl.h>
+#include <OpenGLES/ES2/glext.h>
 
-@property (strong, nonatomic) UIWindow *window;
+@interface VUMeterViewGL : UIView {}
 
+-(void)setRMS : (unsigned short)rms andAbsMax : (unsigned short)absMax;
+-(void)reset;
+-(void)activate;
+-(void)deactivate;
 
 @end
+
+#endif/*_VU_METER_VIEW_GL_H_*/
+
 

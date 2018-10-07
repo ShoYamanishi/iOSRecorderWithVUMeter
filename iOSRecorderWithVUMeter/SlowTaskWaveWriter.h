@@ -20,13 +20,28 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 //
+#ifndef _SLOW_TASK_WAVE_WRITER_H_
+#define _SLOW_TASK_WAVE_WRITER_H_
 
-#import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+#ifdef USE_POSIX_VERSION_OF_SLOW_TASK_MANAGER
+#import "SlowTaskManagerPosix.h"
+#else
+#import "SlowTaskManager.h"
+#endif
 
-@property (strong, nonatomic) UIWindow *window;
 
+#ifdef USE_POSIX_VERSION_OF_SLOW_TASK_MANAGER
+@interface SlowTaskWaveWriter : SlowTaskManagerPosix
+#else
+@interface SlowTaskWaveWriter : SlowTaskManager
+#endif
+
+@property (nonatomic, strong) NSString *mBaseFileName;
+@property int mSampleRate;
+@property int mNumberOfChannels;
 
 @end
+
+#endif /*_SLOW_TASK_WAVE_WRITER_H_*/
 
