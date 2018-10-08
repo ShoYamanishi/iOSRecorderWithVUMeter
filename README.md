@@ -44,9 +44,9 @@ AudioInputManager.{h,m}.
   To demonstrate realtime audio sampling, I have implemented a nice realistic
 VU meter with OpenGL whose hand moves according to a physical model.
 On my iPhone 6+/iOS 12.0, the audio render callback is called quite regularly
-at around 50 Hz (1024 samples @48000 sample rate for the front internal mic).
-It is moves at the OpenGL frame rate but the current energy info gets updated
-at the rate of the AudioUnit callbacks, which is 
+at around 50 Hz (1024 samples @48000 sample rate for the front internal mic),
+which is close to the frame rate. At that rate, the current RMS is calculated
+and the indicator gets updated.
 The VU meter is implemented as a UIView in VUMeterViewGL.{h.m} with 
 accompanying texture PNG file and the two tiny shaders.
 
@@ -90,3 +90,17 @@ selection/entering UI.
 Ex. Plugging a USB or Bluetooth Mic is internally detected,
 but the main screen will not be udpated.
 The App is easily modifiable for more proper error and external event handling.
+
+# Dependencies
+
+The image of the VU meter is taken from the following in Wikipedia.
+It is provided under Creative Commons BY 2.5.
+
+>   https://en.wikipedia.org/wiki/VU_meter#/media/File:VU_Meter.jpg
+>   Iainf 05:15, 12 August 2006 (UTC) - Own work CC BY 2.5
+
+# Contact
+
+For technical and commercial inquiries, please contact: Shoichiro Yamanishi
+
+yamanishi72@gmail.com
