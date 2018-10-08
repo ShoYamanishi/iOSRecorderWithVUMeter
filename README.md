@@ -39,7 +39,7 @@ inputs in chunks in realtime.
 To use AudioUnit, you need help from AVAudioSession to get/set the current 
 audio configuration.
 In the application those functionalities are comopactly implemented in
-AudioInputManager.{h,m}.
+**AudioInputManager.{h,m}**.
 
   To demonstrate realtime audio sampling, I have implemented a nice realistic
 VU meter with OpenGL whose hand moves according to a physical model.
@@ -47,7 +47,7 @@ On my iPhone 6+/iOS 12.0, the audio render callback is called quite regularly
 at around 50 Hz (1024 samples @48000 sample rate for the front internal mic),
 which is close to the frame rate. At that rate, the current RMS is calculated
 and the indicator gets updated.
-The VU meter is implemented as a UIView in VUMeterViewGL.{h.m} with 
+The VU meter is implemented as a UIView in **VUMeterViewGL.{h.m}** with 
 accompanying texture PNG file and the two tiny shaders.
 
   The recording to a file is treated as a slow heavy task to demonstrate
@@ -57,12 +57,12 @@ During a recording the raw audio that comes in chunks get accummulated to a
 temporary file.
 At the end of recording, the raw audio is converted to a wav file with RIFF 
 header.
-The handling of background task is generalized in SlowTaskManager.{h,m} that 
-utilizes iOS's very covenient Dispatch Queue mechanism.
-The actual file access is done by its subclass SlowTaskWaveWriter.{h,m}.
-I have also implemented another base class SlowTaskManagerPosix.{h,m}, which
-does not use Dispatch Queue, but use the POSIX primitives such as pthread and
-condvar.
+The handling of background task is generalized in **SlowTaskManager.{h,m}**
+that utilizes iOS's very covenient Dispatch Queue mechanism.
+The actual file access is done by its subclass **SlowTaskWaveWriter.{h,m}**.
+I have also implemented another base class **SlowTaskManagerPosix.{h,m}**,
+ which does not use Dispatch Queue, but use the POSIX primitives such as 
+pthread and condvar.
 It was taken from my old code for an old bare-bone embedded system to which
 I was implementing an ASR task.
 I just wanted to see how the POSIX primitives work on the latest iOS.
@@ -72,7 +72,7 @@ mechanism using a high level API, AVAudioPlayer.
 It draws the wave shape on the screen, and gives some info about the file,
 such as SNR, which is estimated by NIST algorithm.
 The playback part is implemented as a UIViewController,
-"PlayWaveViewController.{h,m}.
+**PlayWaveViewController.{h,m}**.
 
 It has a bare minimum functionality, but adding some more UIs such as
 file name selection, and some error and external event handling to make
